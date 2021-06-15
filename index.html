@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- Google Font Catamaran (200, 400, 500, 800)-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;400;500;800&display=swap" rel="stylesheet">     
+        
         <!-- Gridlex for our flexbox-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gridlex/2.0.8/gridlex.min.css">
 
@@ -16,10 +20,10 @@
         <!------------- Header Banner ---------------->
 
 
-        <header class="padded grid">
+        <header class="padded grid text-center tall-100">
             <div class="col-12-middle">
-                <h3>sleep like a baby</h3>
-                <h1>the ultimate mattress solution</h1>                
+                <h3><span class="featured-text">sleep</span> like a baby</h3>
+                <h1 class="font-weight-normal">the ultimate mattress solution</h1>                
             </div>
         </header>
 
@@ -27,19 +31,20 @@
         <!------------ Gallery Section---------------->
 
 
-        <section class="grid">
-            <div class="padded col-6">
-                <h2>build to last a lifetime</h2>
+        <section class="grid text-left">
+            <div class="padded col-6-middle">
+                <h2>build to last a <span class="featured-text">lifetime</span></h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio animi veniam fugit similique quisquam placeat ipsam magnam iure corporis, quis, recusandae ab dicta asperiores quibusdam maiores repellendus tempora nobis cum.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptate necessitatibus consequuntur deserunt! Iure totam dignissimos, iste eum qui unde incidunt esse debitis saepe harum quae, porro asperiores est quia.</p>
             </div>
-            <div class="bg-image col-6">
+            <div class="bg-image bg-bed col-6 tall-70">
                 <!-- background image bed -->
             </div>
-            <div class="bg-image col-6">
+            <div class="bg-image bg-bug col-6 tall-70">
                 <!-- background image pug sleeping-->
             </div>
-            <div class="padded col-6">
-                <h2>build to last a lifetime</h2>
+            <div class="padded col-6-middle">
+                <h2>so <span class="featured-text">soft</span> you'll melt</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio animi veniam fugit similique quisquam placeat ipsam magnam iure corporis, quis, recusandae ab dicta asperiores quibusdam maiores repellendus tempora nobis cum.</p>
             </div>
         </section>
@@ -48,7 +53,10 @@
         <!------------ Feature Icon Grid---------------->
 
 
-        <section class="padded grid bg-dark">
+        <section class="padded grid bg-dark text-left">
+            <div class="padded-sm col-12 text-center">
+                <h2> <span class="featured-text">features</span> you will love</h2>
+            </div>
             <div class="padded-sm col-3">
                 <i class="fas fa-cloud"></i>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A tempore ab, rerum sit odio beatae expedita quia suscipit! Est quis nemo soluta iusto qui et a aliquam porro accusamus ea?</p>
@@ -69,22 +77,27 @@
 
        <!------------ Banner---------------->
 
-       <section class="padded">
-           <h3>never underestimate the power of a good night sleep</h3>
+       <section class="padded text-center bg-pillow tall-60 grid bg-image">
+            <div class="col-12-middle">
+                <h3>
+                    <span class="small-text font-weight-normal">never underestimate the power of</span> 
+                    <br> <span class="big-text">good night <span class="white-text">sleep</span></span> 
+                </h3>
+            </div>
        </section>
 
 
        <!------------ Testimonial Section---------------->
-       <section class="padded grid">
-           <div class="col-1">
-               <span>"</span>
+       <section class="padded-lg grid">
+           <div class="col-1 text-right">
+               <span class="quote-icon">&#8220</span>
            </div>
-           <div class="col-10">
-               <p>I've never experienced sleep like this. Omg I really love this mattress I want to buy one to every member of my family</p>
-               <p>A very happy customer</p>
+           <div class="col-10 text-center">
+               <p class="medium-text font-weight-light">I've never experienced sleep like this. Omg I really love this mattress I want to buy one to every member of my family</p>
+               <p class="subtitle">- A very happy customer</p>
            </div>
            <div class="col-1">
-               <span>"</span>
+               <span class="quote-icon">"</span>
            </div>
        </section>
 
@@ -93,16 +106,15 @@
 
 
         <footer class="padded grid-spaceBetween bg-dark">
-            <div class="col-4">
-                <h2>let's connect</h2>
+            <div class="col-4-bottom">
+                <h2>let's<br><span class="featured-text">connect</span></h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem doloremque excepturi aliquam obcaecati maiores recusandae animi at iusto sint, velit tempore harum repellendus provident quia optio eos rem soluta odit?</p>
             </div>
-            <div class="col-6">
-                <p><strong>Call:</strong>34759327459</p>
-                <p><strong>E-Mail:</strong>ahsdfkh@ad.de</p>
-                <p><strong>Store:</strong>askdfja 34b 847 Munich</p>
-                <p><strong>Instagram</strong>@thesleepco</p>
-
+            <div class="col-5-bottom">
+                <p><strong>Call:</strong> <a href="tel:#">34759327459</a></p>
+                <p><strong>E-Mail:</strong> <a href="mailto:#">ahsdfkh@ad.de</a></p>
+                <p><strong>Store:</strong> askdfja 34b 847 Munich</p>
+                <p><strong>Instagram:</strong> <a href="https://www.instagram.con/thesleepco">@thesleepco</a></p>
             </div>
         </footer>
     </body>

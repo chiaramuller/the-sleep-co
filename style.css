@@ -105,16 +105,14 @@ a:hover{
 }
 
 /* Header & Footer Styles*/
-
 header{
-    background-image: url("/images/the-sleep-co-white-sheets.png");
-    background-size: cover;
-    background-position: center;
+    text-align: right;
+    padding: 1rem;
 }
 
-header h3{
-    font-size: 5.5rem;
-    line-height: 1;
+header a{
+    display: inline-block;
+    margin: 1rem;
 }
 
 footer a{
@@ -133,7 +131,23 @@ footer a{
     background-position: 50% 57%;   
 }
 
+
+/* Top Banner*/
+
+.top-banner{
+    background-image: url("/images/the-sleep-co-white-sheets.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.top-banner h3{
+    font-size: 5.5rem;
+    line-height: 1;
+}
+
+
 /* Icon Grid*/
+
 .fas{
     display: inline-block;
     text-align: center;

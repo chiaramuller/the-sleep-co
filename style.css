@@ -326,6 +326,8 @@ button{
     .sm-margin-l-0 { margin-left: 0; }
     .sm-margin-r-0 { margin-right: 0; }
 
+    .sm-tall-50{ min-height: 50vh;}
+
     .logo h2{
         font-size: 2rem;
     }

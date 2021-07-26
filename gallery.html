@@ -3,35 +3,35 @@ layout: default
 images: 
  - column: col-4_xs-12
    ratio: specific-ratio-48
-   url: https://source.unsplash.com/O6UzDPFH36g
+   background_image: https://source.unsplash.com/O6UzDPFH36g
    pos: bg-pos-b
  - column: col-8
    ratio: landscape-wide
-   url: https://source.unsplash.com/G4ziHhpaWJ4
+   background_image: https://source.unsplash.com/G4ziHhpaWJ4
    pos: bg-pos-b
  - column: col-6
    ratio: square
-   url: https://source.unsplash.com/U3aF7hgUSrk
+   background_image: https://source.unsplash.com/U3aF7hgUSrk
    pos: bg-pos-r
  - column: col-6
    ratio: square
-   url: https://source.unsplash.com/gRHEt2kF3NU
+   background_image: https://source.unsplash.com/gRHEt2kF3NU
    pos: 
  - column: col-4_xs-12
    ratio: portrait
-   url: https://source.unsplash.com/AbNO2iejoXA
+   background_image: https://source.unsplash.com/AbNO2iejoXA
    pos: 
  - column: col-4_xs-12
    ratio: portrait
-   url: https://source.unsplash.com/Ntm4C2lCWxQ
+   background_image: https://source.unsplash.com/Ntm4C2lCWxQ
    pos: 
  - column: col-4_xs-12
    ratio: portrait
-   url: https://source.unsplash.com/kd0U9ohhpAs
+   background_image: https://source.unsplash.com/kd0U9ohhpAs
    pos: 
  - column: col-12
    ratio: landscape-wide
-   url: https://source.unsplash.com/nWX4pKwzLoE
+   background_image: https://source.unsplash.com/nWX4pKwzLoE
    pos: bg-pos-b
 ---
 
@@ -57,7 +57,7 @@ images:
 
             {% for item in page.images%}
             <div class="{{item.column}}">
-                <div class="bg-image {{item.ratio}} {{item.pos}}" style="background-image: url('{{item.url}}')"></div>
+                <div class="bg-image {{item.ratio}} {{item.pos}}" style="background-image: url('{{item.background_image}}')"></div>
             </div>
 
             {% endfor %}

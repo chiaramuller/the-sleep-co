@@ -96,17 +96,21 @@ img { max-width: 100%; }
 .bg-light { background-color: lightblue }
   
 .bg-image {
+    background-image: url("/images/the-sleep-co-dog.png");
     background-color: grey; /* Set a fall-back color while images are loading */ 
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat;
+
 }
   
 /* Aspect Ratios with percentage unit are only effective if the element (the <div>) is inside a parent container or column, it can't be applied to the column itself. */
-.landscape     { padding-bottom: 66%:  }
+.landscape     { padding-bottom: 66%;  }
+.landscape-wide{ padding-bottom: 56%;  }
 .portrait-tall { padding-bottom: 175%; }
 .portrait      { padding-bottom: 125%; }
 .square        { padding-bottom: 100%; }
+.specific-ratio-48{padding-bottom: 114%}
   
   
 /* Background Position */
@@ -123,6 +127,7 @@ img { max-width: 100%; }
 
 /* Background Images*/
 .bg-bed{ background-image: url("/images/the-sleep-co-bed.png");}
+
 .bg-bug{ 
     background-image: url("/images/the-sleep-co-dog.png"); 
     background-position: 50% 35%;
@@ -266,6 +271,11 @@ footer a{
     font-size: 3rem;
 }
 
+
+/* Image Gallery*/
+.gallery [class*="col-"]{
+    padding: 0.5%;
+}
 
 /*Contact form--------------------------*/
 

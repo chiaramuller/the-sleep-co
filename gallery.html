@@ -1,45 +1,67 @@
 ---
-layouts:default
+layout: default
+images: 
+ - column: col-4_xs-12
+   ratio: specific-ratio-48
+   url: https://source.unsplash.com/O6UzDPFH36g
+   pos: bg-pos-b
+ - column: col-8
+   ratio: landscape-wide
+   url: https://source.unsplash.com/G4ziHhpaWJ4
+   pos: bg-pos-b
+ - column: col-6
+   ratio: square
+   url: https://source.unsplash.com/U3aF7hgUSrk
+   pos: bg-pos-r
+ - column: col-6
+   ratio: square
+   url: https://source.unsplash.com/gRHEt2kF3NU
+   pos: 
+ - column: col-4_xs-12
+   ratio: portrait
+   url: https://source.unsplash.com/AbNO2iejoXA
+   pos: 
+ - column: col-4_xs-12
+   ratio: portrait
+   url: https://source.unsplash.com/Ntm4C2lCWxQ
+   pos: 
+ - column: col-4_xs-12
+   ratio: portrait
+   url: https://source.unsplash.com/kd0U9ohhpAs
+   pos: 
+ - column: col-12
+   ratio: landscape-wide
+   url: https://source.unsplash.com/nWX4pKwzLoE
+   pos: bg-pos-b
 ---
+
 <!------------- Header  ---------------->
     <header class="grid tall-100 md-tall-80">
 
         {% include header-nav.html %}
          
         <div class="col-12 text-center">
-             <h3 data-aos="fade-in" data-aos-duration="1000"><span class="featured-text" >
-                 sleep</span> like a baby
+             <h3 data-aos="fade-in" data-aos-duration="1000">
+                 <span class="featured-text" > Explore</span> our world
              </h3>
              <h1 class="font-weight-normal" data-aos="fade-out" data-aos-delay="500">the ultimate mattress solution</h1>                
          </div>
     </header>
 
-    <h2>Filterable Image Gallery</h2>
+    <!-- Image Gallery -->
+    <section class="padded">
+        <h2 class="text-center">Filterable Image Gallery</h2>
 
-    <div class="portfolio-filter" id="portfolio-filter">
-    <span>ALL</span> /
-    <span>type 1</span> / 
-    <span>type 2</span> / 
-    <span>type 3</span> 
-    </div>
+        
+        <div class="gallery grid">
 
-    <div class="grid-center filterable-gallery" id="filterable-gallery">
-    <div class="col-4_sm-6_xs-12 gallery-item type-1">
-        <div class="bg-image bg-1"></div>
-    </div>
-        <div class="col-4_sm-6_xs-12 gallery-item type-2">
-        <div class="bg-image bg-2"></div>
-    </div>
-        <div class="col-4_sm-6_xs-12 gallery-item type-3">
-        <div class="bg-image bg-3"></div>
-    </div>
-        <div class="col-4_sm-6_xs-12 gallery-item type-2">
-        <div class="bg-image bg-2"></div>
-    </div>
-        <div class="col-4_sm-6_xs-12 gallery-item type-3">
-        <div class="bg-image bg-3"></div>
-    </div>
-        <div class="col-4_sm-6_xs-12 gallery-item type-1">
-        <div class="bg-image bg-1"></div>
-    </div>
-    </div>
+            {% for item in page.images%}
+            <div class="{{item.column}}">
+                <div class="bg-image {{item.ratio}} {{item.pos}}" style="background-image: url('{{item.url}}')"></div>
+            </div>
+
+            {% endfor %}
+
+        </div>
+    </section>
+    

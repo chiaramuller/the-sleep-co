@@ -7,7 +7,7 @@ _select_data:
    - landscape-wide
    - specific-ratio-48
 
-  column-sizes: 
+  columns: 
     col-6: half the screen size
     col-12: full width 
     col-4: One Third

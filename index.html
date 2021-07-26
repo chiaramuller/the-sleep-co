@@ -1,5 +1,14 @@
 ---
 layout: default
+features:
+ - icon: fas fa-cloud
+   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe pariatur quisquam incidunt nesciunt, quam cumque nobis similique vero. Quis optio dolores laboriosam ipsum inventore delectus labore. Saepe sapiente corporis impedit.
+ - icon: fas fa-carrot
+   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe pariatur quisquam incidunt nesciunt, quam cumque nobis similique vero. Quis optio dolores laboriosam ipsum inventore delectus labore. Saepe sapiente corporis impedit.  
+ - icon: fas fa-apple-alt
+   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe pariatur quisquam incidunt nesciunt, quam cumque nobis similique vero. Quis optio dolores laboriosam ipsum inventore delectus labore. Saepe sapiente corporis impedit.
+ - icon: fas fa-pizza-slice
+   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe pariatur quisquam incidunt nesciunt, quam cumque nobis similique vero. Quis optio dolores laboriosam ipsum inventore delectus labore. Saepe sapiente corporis impedit.     
 ---
        <!------------- Header  ---------------->
         <header class="grid tall-100 md-tall-80">
@@ -11,7 +20,6 @@ layout: default
                 <h1 class="font-weight-normal">the ultimate mattress solution</h1>                
             </div>
         </header>
-
 
         <!------------ Gallery Section---------------->
         <section class="grid text-left">
@@ -34,28 +42,17 @@ layout: default
 
 
         <!------------ Feature Icon Grid---------------->
-
-
-        <section class="padded grid bg-dark text-left">
+        <section class="padded grid-center bg-dark text-left">
             <div class="padded-sm col-12 text-center">
                 <h2> <span class="featured-text">features</span> you will love</h2>
             </div>
-            <div class="padded-sm col-3_sm-6 xxs-stack">
-                <i class="fas fa-cloud"></i>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A tempore ab, rerum sit odio beatae expedita quia suscipit! Est quis nemo soluta iusto qui et a aliquam porro accusamus ea?</p>
+
+            {% for item in page.features%}
+            <div class="padded-sm col-3_sm-6-center xxs-stack">
+                <i class="{{item.icon}}"></i>
+                <p>{{item.description}}</p>
             </div>
-            <div class="padded-sm col-3_sm-6 xxs-stack">
-                <i class="fas fa-cloud"></i>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A tempore ab, rerum sit odio beatae expedita quia suscipit! Est quis nemo soluta iusto qui et a aliquam porro accusamus ea?</p>
-            </div>
-            <div class="padded-sm col-3_sm-6 xxs-stack">
-                <i class="fas fa-cloud"></i>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A tempore ab, rerum sit odio beatae expedita quia suscipit! Est quis nemo soluta iusto qui et a aliquam porro accusamus ea?</p></div>
-            </div>
-            <div class="padded-sm col-3_sm-6 xxs-stack">
-                <i class="fas fa-cloud"></i>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A tempore ab, rerum sit odio beatae expedita quia suscipit! Est quis nemo soluta iusto qui et a aliquam porro accusamus ea?</p></div>
-            </div>
+            {% endfor %}
         </section>
 
        <!------------ Banner---------------->

@@ -1,43 +1,20 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <!-- Viewport meta for responsive design-->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>About the Sleep Co</title>
-
-        <!-- Google Font Catamaran (200, 400, 500, 800)-->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;400;500;800&display=swap" rel="stylesheet">     
-        
-        <!-- Gridlex for our flexbox-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gridlex/2.0.8/gridlex.min.css">
-
-        <!--This is our font awesome icons -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        
-        <!--This is our custom stylesheet-->
-        <link rel="stylesheet" href="style.css">
-
-    </head>
-
-    <body>
+---
+layout: default
+cards: 
+ - heading: Produkt Apple
+   description: Sapiente aliquid modi doloremque porro eaque nihil adipisci illum, ipsum minus, molestiae architecto consequuntur enim ab delectus, a id quos? Delectus, accusantium?
+   featured_image: /images/the-sleep-co-white-sheets.png
+ - heading: Produkt Pear
+   description: Sapiente aliquid modi doloremque porro eaque nihil adipisci illum, ipsum minus, molestiae architecto consequuntur enim ab delectus, a id quos? Delectus, accusantium?
+   featured_image: /images/the-sleep-co-bed.png
+ - heading: Produkt Banana
+   description: Sapiente aliquid modi doloremque porro eaque nihil adipisci illum, ipsum minus, molestiae architecto consequuntur enim ab delectus, a id quos? Delectus, accusantium?
+   featured_image: /images/the-sleep-co-yellow.png
+---
 
         <!--------------Header-------------------->
         <header class="grid tall-60">
-            <div class="header-nav grid col-12-top text-left sm-text-center">
-                <div class="col-5-middle_sm-12 sm-padded-b-0">
-                    <a href="/index.html" class="logo">
-                        <h2>The Sleep Co</h2>
-                    </a>
-                </div>
-                <nav class="col-7-middle_sm-12 text-right sm-text-center">
-                    <a href="/index.html">Home</a>
-                    <a href="/about.html">About</a>
-                    <a href="/products.html">Products</a>
-                    <a href="/contact.html">Contact</a>
-                </nav>
-            </div>
+            {% include header-nav.html %}
             <div class="col-12 text-center">
                 <h3>
                     addictively <span class="featured-text">soft</span>
@@ -45,7 +22,6 @@
                 <h1 class="font-weight-normal">you won't want to get out of bed</h1>                
             </div>
         </header>
-        
                 
         <!------------ Text Grid ---------------->
         <section class="padded grid bg-featured text-left">
@@ -71,35 +47,20 @@
         </section>
 
     
-         <!-- Cards -->
+         <!----------- Cards -------------------->
         <section class="grid padded">
+
+            {% for item in page.cards%}
             <div class="col-4_xs-12 padded-sm">
                 <div class="card">
-                    <div class="bg-image portrait"></div>
+                    <div class="bg-image portrait" style="background-image: url('{{item.featured_image}}')"></div>
                     <div class="padded-1">
-                        <h3>little heading</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto laborum expedita voluptatem ad perferendis impedit corporis mollitia, quidem asperiores hic dignissimos perspiciatis autem magnam qui reprehenderit earum quo architecto facere.</p>
+                        <h3>{{item.heading}}</h3>
+                        <p>{{item.description}}</p>
                     </div>
                 </div>
             </div>
-            <div class="col-4_xs-12 padded-sm">
-                <div class="card">
-                    <div class="bg-image portrait"></div>
-                    <div class="padded-1">
-                        <h3>little heading</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto laborum expedita voluptatem ad perferendis impedit corporis mollitia, quidem asperiores hic dignissimos perspiciatis autem magnam qui reprehenderit earum quo architecto facere.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4_xs-12 padded-sm">
-                <div class="card">
-                    <div class="bg-image portrait"></div>
-                    <div class="padded-1">
-                        <h3>little heading</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto laborum expedita voluptatem ad perferendis impedit corporis mollitia, quidem asperiores hic dignissimos perspiciatis autem magnam qui reprehenderit earum quo architecto facere.</p>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </section>
 
                 
@@ -146,19 +107,3 @@
                 <!-- background image bed -->
             </div>
         </section>
-
-        <!------------ Footer ---------------->
-        <footer class="padded grid-spaceBetween bg-dark">
-            <div class="col-4-bottom">
-                <h2>let's<br><span class="featured-text">connect</span></h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem doloremque excepturi aliquam obcaecati maiores recusandae animi at iusto sint, velit tempore harum repellendus provident quia optio eos rem soluta odit?</p>
-            </div>
-            <div class="col-5-bottom">
-                <p><strong>Call:</strong> <a href="tel:#">34759327459</a></p>
-                <p><strong>E-Mail:</strong> <a href="mailto:#">ahsdfkh@ad.de</a></p>
-                <p><strong>Store:</strong> askdfja 34b 847 Munich</p>
-                <p><strong>Instagram:</strong> <a href="https://www.instagram.con/thesleepco">@thesleepco</a></p>
-            </div>
-        </footer>
-    </body>
-</html>

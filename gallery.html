@@ -48,20 +48,47 @@ images:
          </div>
     </header>
 
-    <!-- Image Gallery -->
+    <!-- Popup Image Gallery -->
     <section class="padded">
-        <h2 class="text-center">Filterable Image Gallery</h2>
-
-        
-        <div class="gallery grid">
+        <h2 class="text-center">Pop Up Image Gallery</h2>
+        <div class="gallery grid" id="lightgallery">
 
             {% for item in page.images%}
-            <div class="{{item.column}}">
+            <a class="{{item.column}}" href="{{item.background_image}}">
                 <div class="bg-image {{item.ratio}} {{item.pos}}" style="background-image: url('{{item.background_image}}')"></div>
-            </div>
-
+            </a>
             {% endfor %}
 
         </div>
+      </section>
+
+      <section class="padded">
+        <h2 class="text-center">Hidden Image Gallery</h2>
+        <div class="gallery grid" id="lightgallery-2">
+            <a class="button" href="https://source.unsplash.com/O6UzDPFH36g">
+              View Our Work
+            </a>
+            <a href="/images/the-sleep-co-bed.png"></a>
+            <a href="/images/the-sleep-co-dog.png"></a>
+            <a href="/images/the-sleep-co-white-sheets.png"></a>
+            <a href="/images/the-sleep-co-yellow.png"></a>
+            <a href="/images/the-sleep-co-dog.png"></a>
+            <a href="/images/the-sleep-co-bed.png"></a>
+        </div>
+      </section>
+
+      <!-- Standard Image Gallery -->
+      <section class="padded">
+        <h2 class="text-center">Standard Image Gallery</h2>
+        <div class="gallery grid">
+
+          {% for item in page.images%}
+          <div class="{{item.column}}">
+              <div class="bg-image {{item.ratio}} {{item.pos}}" style="background-image: url('{{item.background_image}}')"></div>
+          </div>
+
+          {% endfor %}
+
+      </div>
     </section>
     

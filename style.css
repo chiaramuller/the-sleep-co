@@ -277,6 +277,19 @@ footer a{
     padding: 0.5%;
 }
 
+.gallery a{
+    border-bottom: none; 
+}
+
+/*Background of galler when active*/
+.lg-backdrop{
+    background-color: rgb(60,60,60);
+}
+
+.lg-backdrop.in{
+    opacity: 0.9;
+}
+
 /*Contact form--------------------------*/
 
 input, textarea{
@@ -294,11 +307,12 @@ textarea:focus{
     border: 2px solid #f4b525;
 }
 
+.gallery .button,
 button{
     padding:0.5rem 2rem;
     background-color: #f4b525;
     appearance: none;
-    border: 3px solid #f4b525;
+    border: 3px solid #ddc99b;
     color: inherit;
 }
 

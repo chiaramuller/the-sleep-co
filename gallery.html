@@ -1,38 +1,48 @@
 ---
 layout: default
+popup-gallery: true
+gallery-background: Dark Background
 images: 
  - column: col-4_xs-12
    ratio: specific-ratio-48
    background_image: https://source.unsplash.com/O6UzDPFH36g
    pos: bg-pos-b
+   type: mango
  - column: col-8
    ratio: landscape-wide
    background_image: https://source.unsplash.com/G4ziHhpaWJ4
    pos: bg-pos-b
+   type: mango
  - column: col-6
    ratio: square
    background_image: https://source.unsplash.com/U3aF7hgUSrk
    pos: bg-pos-r
+   type: cherry
  - column: col-6
    ratio: square
    background_image: https://source.unsplash.com/gRHEt2kF3NU
    pos: 
+   type: mango
  - column: col-4_xs-12
    ratio: portrait
    background_image: https://source.unsplash.com/AbNO2iejoXA
    pos: 
+   type: apple
  - column: col-4_xs-12
    ratio: portrait
    background_image: https://source.unsplash.com/Ntm4C2lCWxQ
-   pos: 
+   pos:
+   type: apple
  - column: col-4_xs-12
    ratio: portrait
    background_image: https://source.unsplash.com/kd0U9ohhpAs
-   pos: 
+   pos:
+   type: apple 
  - column: col-12
    ratio: landscape-wide
    background_image: https://source.unsplash.com/nWX4pKwzLoE
    pos: bg-pos-b
+   type: apple
 ---
 
 <!------------- Header  ---------------->
@@ -48,37 +58,26 @@ images:
          </div>
     </header>
 
+    {% if page.popup-gallery == true %}
     <!-- Popup Image Gallery -->
-    <section class="padded">
+    <section class="padded {% if page.gallery-background == 'Dark Background' %} bg-dark {%endif%}">
         <h2 class="text-center">Pop Up Image Gallery</h2>
         <div class="gallery grid" id="lightgallery">
 
             {% for item in page.images%}
+            {% if item.type =="mango" or item.type=="cherry"%}
             <a class="{{item.column}}" href="{{item.background_image}}">
                 <div class="bg-image {{item.ratio}} {{item.pos}}" style="background-image: url('{{item.background_image}}')"></div>
             </a>
+            {%endif%}
             {% endfor %}
 
         </div>
       </section>
 
-      <section class="padded">
-        <h2 class="text-center">Hidden Image Gallery</h2>
-        <div class="gallery grid" id="lightgallery-2">
-            <a class="button" href="https://source.unsplash.com/O6UzDPFH36g">
-              View Our Work
-            </a>
-            <a href="/images/the-sleep-co-bed.png"></a>
-            <a href="/images/the-sleep-co-dog.png"></a>
-            <a href="/images/the-sleep-co-white-sheets.png"></a>
-            <a href="/images/the-sleep-co-yellow.png"></a>
-            <a href="/images/the-sleep-co-dog.png"></a>
-            <a href="/images/the-sleep-co-bed.png"></a>
-        </div>
-      </section>
-
+    {%else%}
       <!-- Standard Image Gallery -->
-      <section class="padded">
+      <section class="padded {{page.gallery-background}}">
         <h2 class="text-center">Standard Image Gallery</h2>
         <div class="gallery grid">
 
@@ -89,6 +88,23 @@ images:
 
           {% endfor %}
 
-      </div>
-    </section>
+        </div>
+      </section>
+    {%endif%}
+
+    
+<!--       <section class="padded">
+        <h2 class="text-center">Hidden Image Gallery</h2>
+        <div class="gallery grid" id="lightgallery-2">
+            <a class="button" href="https://source.unsplash.com/O6UzDPFH36g"title="Cute Dog Image">
+              View Our Work
+            </a>
+            <a href="/images/the-sleep-co-bed.png" title="Funny Bed"></a>
+            <a href="/images/the-sleep-co-dog.png" title="Funny Dog"></a>
+            <a href="/images/the-sleep-co-white-sheets.png" title="Funny White Sheet"></a>
+            <a href="/images/the-sleep-co-yellow.png" title="Yellow image"></a>
+            <a href="/images/the-sleep-co-dog.png" title="Funny Dog 2"></a>
+            <a href="/images/the-sleep-co-bed.png" title="Funny Bed 2"></a>
+        </div>
+      </section> -->
     

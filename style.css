@@ -289,6 +289,9 @@ footer a{
 .lg-backdrop.in{
     opacity: 0.9;
 }
+.lg-sub-html{
+    background-color: rgb(60,60,60, 0.9);
+}
 
 /*Contact form--------------------------*/
 
@@ -315,6 +318,7 @@ button{
     border: 3px solid #ddc99b;
     color: inherit;
 }
+
 
 /*Testimonial Block ----------------*/
 .quote-icon{
